@@ -14,7 +14,7 @@ switch (action.type) {
         return state - action.payload;
 
          case DEPOSET_MONEY:
-        return state - action.payload
+        return state + action.payload
         
         
 

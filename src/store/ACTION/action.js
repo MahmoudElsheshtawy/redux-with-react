@@ -28,11 +28,20 @@ export const addproduct= (product)=>{
     }
 }
 export const getproduct= (products)=>{
+    //for set product in the store
     return{
         type:GET_PRODUCTS,
         payload:products
     }
 }
-
+// feching products action
+export const fechAllProducts=()=>{
+    return async(dipatch)=>{
+        const response=await fetch(`https://fakestoreapi.com/products`)
+        const data=await response.json();
+        console.log(data);
+       dipatch(getproduct(data))
+    }
+}
 
 

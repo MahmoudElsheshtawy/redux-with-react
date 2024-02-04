@@ -1,4 +1,5 @@
-import { combineReducers, createStore } from "redux";
+import {thunk} from 'redux-thunk'
+import { combineReducers, createStore,applyMiddleware  } from "redux";
 import { bankReduser } from "./redusers/bank-reduser";
 import { productsReduser } from "./redusers/Product-Reduser";
 
@@ -10,7 +11,7 @@ const appreduser= combineReducers({
 })
 
 
-export const store = createStore(appreduser)
+export const store = createStore(appreduser,applyMiddleware (thunk))
 
 
 

@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addproduct } from '../store/ACTION/action'
+import { addproduct, fechAllProducts } from '../store/ACTION/action'
 
 const Products = () => {
     const dispach =useDispatch()
     const products= useSelector((state)=>state.products)
     console.log(products);
+
+
+
+   useEffect(()=>{
+
+
+
+    dispach(fechAllProducts())
+   },[])
+
+
   return (
     <>
     <h1>my products</h1>
