@@ -1,7 +1,7 @@
 import {thunk} from 'redux-thunk'
 import { combineReducers, createStore,applyMiddleware  } from "redux";
 import { bankReduser } from "./redusers/bank-reduser";
-import { productsReduser } from "./redusers/Product-Reduser";
+import  productsReduser  from "./redusers/Product-Reduser";
 
 
 

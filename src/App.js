@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import { deposet, withdrow } from "./store/ACTION/action";
+import { deposet, withdrow } from "./redux-Toolkit/slicellis/bankSlice";
 import Products from "./components/Products";
 
 function App() {

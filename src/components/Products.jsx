@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addproduct, fechAllProducts } from '../store/ACTION/action'
-
+// import { addproduct ,FetchProduct } from '../redux-Toolkit/slicellis/ProductSlice'
+import {FetchProduct} from '../redux-Toolkit/slicellis/ProductSlice';
 const Products = () => {
     const dispach =useDispatch()
-    const products= useSelector((state)=>state.products)
+    const products= useSelector((state)=>state.product)
     console.log(products);
 
 
@@ -13,14 +13,14 @@ const Products = () => {
 
 
 
-    dispach(fechAllProducts())
+    dispach(FetchProduct())
    },[])
 
 
   return (
     <>
     <h1>my products</h1>
-        <button onClick={()=>dispach(addproduct({id:"2",title:"im nobody"}))}>addproduct</button>
+        {/* <button onClick={()=>dispach(addproduct({id:"2",title:"im nobody"}))}>addproduct</button> */}
 {
     products.map((product)=>(
         <div key={product.id}>

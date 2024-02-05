@@ -6,11 +6,11 @@ export const bankSlice = createSlice({
   initialState:1000,
   reducers: {
     deposet: (state,action) => {
-    return state= state - action.payload
+    return state= state + action.payload
     
     },
     withdrow: (state,action) => {
-        return state= state + action.payload
+        return state= state - action.payload
     },
  
   },
